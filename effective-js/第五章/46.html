@@ -1,0 +1,26 @@
+<script>
+    const ratings = {
+        'aaa': 0.8,
+        'bbb': 0.7,
+        '21': 0.6,
+        'ddd': 0.9
+    }
+    let total = 0;
+    for (const name in ratings) {
+        console.log(name); // 21 aaa bbb ddd
+        total += ratings[name]
+    }
+    console.log(total) // 2.99....6
+
+    let total2 = 0;
+    const map = new Map();
+    map.set('aaa', 0.8);
+    map.set('bbb', 0.7);
+    map.set('21', 0.6);
+    map.set('ddd', 0.9);
+    for(const [key, value] of map.entries()) {
+        console.log(key); // aaa bbb 21 ddd
+        total2 += value;
+    }
+    console.log(total2); // 3
+</script>

@@ -1,0 +1,9 @@
+<script>
+    function User(name) {
+        this.name = name;
+    }
+
+    const u = new User('allen');
+    console.log(Object.getPrototypeOf(u) === User.prototype); // true
+    console.log(u.__proto__ === User.prototype); // true
+</script>
